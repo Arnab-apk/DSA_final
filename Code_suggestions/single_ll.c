@@ -123,12 +123,6 @@ int main()
         printf("6. Exit\n");
         printf("Enter your choice: ");
 
-        if(scanf("%d",&choice)!=1)
-        {
-            printf("Invalid input. Exiting.\n");
-            break;
-        }
-
         switch(choice)
         {
             case 1:
