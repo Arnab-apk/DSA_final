@@ -52,10 +52,31 @@ void Inorder_traversal(struct node * root)
 {
     if(root!=NULL){
         Inorder_traversal(root->left);
-        printf("%d", root->data);
+        printf("%d ", root->data);
         Inorder_traversal(root->right);
     }
 }
+
+//Preorder traversal
+void Preorder_traversal(struct node * root)
+{
+    if(root!=NULL){
+        printf("%d ", root->data);
+        Preorder_traversal(root->left);
+        Preorder_traversal(root->right);
+    }
+}
+
+//Postorder traversal
+void Postorder_traversal(struct node * root)
+{
+    if(root!=NULL){
+        Postorder_traversal(root->left);
+        Postorder_traversal(root->right);
+        printf("%d ", root->data);
+    }
+}
+
 
 int main()
 {
@@ -70,7 +91,9 @@ int main()
         printf("\n3. Find minimum value");
         printf("\n4. Find maximum value");
         printf("\n5. Inorder Traversal");
-        printf("\n6. Exit");
+        printf("\n6. Preorder Traversal");
+        printf("\n7. Postorder Traversal");
+        printf("\n8. Exit");
         printf("\nEnter your choice: ");
         scanf("%d",&choice);
         
@@ -119,6 +142,28 @@ int main()
                 break;
                 
             case 6:
+                if(root==NULL)
+                    printf("Tree is empty\n");
+                else
+                {
+                    printf("Preorder Traversal: ");
+                    Preorder_traversal(root);
+                    printf("\n");
+                }
+                break;
+                
+            case 7:
+                if(root==NULL)
+                    printf("Tree is empty\n");
+                else
+                {
+                    printf("Postorder Traversal: ");
+                    Postorder_traversal(root);
+                    printf("\n");
+                }
+                break;
+                
+            case 8:
                 printf("Exiting...\n");
                 return 0;
                 
