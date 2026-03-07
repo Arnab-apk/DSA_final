@@ -11,7 +11,7 @@ struct node* top=NULL;
 void push()
 {
     struct node* newnode=(struct node*)malloc(sizeof(struct node));
-    printf("ENter value to push: ");
+    printf("Enter value to push: ");
     scanf("%d",&newnode->data);
 
     newnode->next=top;

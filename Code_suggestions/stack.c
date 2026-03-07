@@ -25,9 +25,12 @@ void push()
 //function to remove the top element
 void pop()
 {
-    if(top==-1){
-        printf("Stack underflow\n");
-    }else{
+    if(top==-1)
+    {
+        printf("Stack Underflow\n");
+    }
+    else
+    {
         printf("Popped element is :%d\n", stack[top]);
         top--;
     }
@@ -74,7 +77,7 @@ int main()
                 break;
             case 4:
                 printf("Exiting...\n");
-                exit(0);
+                return 0;
             default:
                 printf("Invalid choice! Please try again.\n");
         }
